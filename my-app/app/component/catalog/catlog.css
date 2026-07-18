@@ -1,0 +1,284 @@
+ /* PRODUCTS / CATALOG */
+  #catalog {
+    background: var(--white);
+  }
+  .catalog-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+  .catalog-filter {
+    display: flex; gap: 0.5rem;
+  }
+  .filter-btn {
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 500; padding: 0.5rem 1.2rem;
+    border: 1px solid var(--green-pale);
+    background: transparent; cursor: pointer; border-radius: 2px;
+    color: var(--text-muted); transition: all 0.3s; font-family: 'Inter', sans-serif;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--green-deep); color: var(--white);
+    border-color: var(--green-deep);
+  }
+
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .product-card {
+    position: relative; overflow: hidden;
+    cursor: pointer; border-radius: 0;
+    aspect-ratio: 4/5;
+  }
+  .product-card:first-child {
+    grid-column: 1 / 3; grid-row: 1 / 3;
+    aspect-ratio: auto;
+  }
+  .product-card .card-bg {
+    width: 100%; height: 100%;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+  }
+  .product-card:hover .card-bg { transform: scale(1.06); }
+
+  .card-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,58,42,0.9) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 2rem;
+  }
+  .product-card:hover .card-overlay { opacity: 1; }
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400; color: var(--white);
+    margin-bottom: 0.4rem;
+    transform: translateY(12px); transition: transform 0.4s ease;
+  }
+  .product-card:hover .card-name { transform: translateY(0); }
+  .card-desc {
+    font-size: 0.8rem; color: var(--green-pale); line-height: 1.6;
+    transform: translateY(8px); transition: transform 0.4s 0.05s ease;
+  }
+  .product-card:hover .card-desc { transform: translateY(0); }
+  .card-tag {
+    position: absolute; top: 1.2rem; left: 1.2rem;
+    font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+    font-weight: 600; color: var(--white);
+    background: rgba(45,90,61,0.75); backdrop-filter: blur(8px);
+    padding: 0.3rem 0.7rem; border-radius: 2px;
+  }
+
+  /* Stone texture fills */
+  .st-italian-white {
+    background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d5 25%, #f2ede6 50%, #dbd2c4 75%, #f0ebe3 100%);
+    position: relative;
+  }
+  .st-italian-white::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: 
+      repeating-linear-gradient(25deg, transparent, transparent 80px, rgba(180,160,130,0.08) 80px, rgba(180,160,130,0.08) 82px),
+      repeating-linear-gradient(-15deg, transparent, transparent 120px, rgba(160,140,110,0.06) 120px, rgba(160,140,110,0.06) 123px);
+  }
+  .st-green-marble {
+    background: linear-gradient(145deg, #1e3828 0%, #2d5040 30%, #3a6a4a 60%, #1a3020 100%);
+    position: relative;
+  }
+  .st-green-marble::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(35deg, transparent, transparent 60px, rgba(100,180,120,0.1) 60px, rgba(100,180,120,0.1) 62px),
+      repeating-linear-gradient(-25deg, transparent, transparent 90px, rgba(200,230,210,0.07) 90px, rgba(200,230,210,0.07) 92px);
+  }
+  .st-granite-black {
+    background: radial-gradient(ellipse at 30% 40%, #333 0%, #1a1a1a 50%, #0d0d0d 100%);
+    position: relative;
+  }
+  .st-granite-black::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(180,160,120,0.15) 1px, transparent 1px),
+      radial-gradient(circle at 60% 70%, rgba(150,130,100,0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 20%, rgba(200,180,140,0.12) 1px, transparent 1px);
+    background-size: 18px 18px, 24px 24px, 15px 15px;
+  }
+  .st-bangalore {
+    background: linear-gradient(135deg, #8a7060 0%, #6a5045 40%, #9a8070 100%);
+  }
+  .st-kota-blue {
+    background: linear-gradient(145deg, #5a7080 0%, #3a5060 50%, #6a8090 100%);
+  }
+
+
+
+
+  /* =========================
+   TABLET (<= 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card:first-child {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+
+/* =========================
+   MOBILE (<= 768px)
+   Clean Apple-style layout
+========================= */
+@media (max-width: 768px) {
+  #catalog {
+    padding: 5rem 1.2rem;
+  }
+
+  .catalog-header {
+    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .catalog-filter {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Make all cards equal height on mobile */
+  .product-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Featured card should NOT break layout */
+  .product-card:first-child {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Overlay always readable */
+  .card-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(26, 58, 42, 0.85) 0%,
+      rgba(26, 58, 42, 0.2) 60%,
+      transparent 100%
+    );
+  }
+
+  .card-name {
+    font-size: 1.2rem;
+  }
+
+  .card-desc {
+    font-size: 0.75rem;
+  }
+
+  .card-tag {
+    font-size: 0.6rem;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE (<= 480px)
+========================= */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .catalog-filter {
+    gap: 0.4rem;
+  }
+
+  .filter-btn {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .product-card {
+    aspect-ratio: 3 / 2;
+  }
+
+  .card-name {
+    font-size: 1.1rem;
+  }
+
+  .card-desc {
+    font-size: 0.72rem;
+  }
+}
+
+
+
+
+.card-bg {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-image {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
+  color: #fff;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
