@@ -33,9 +33,9 @@ export default function Home() {
      <div className="desktop-nav">
  <Export />
      </div>
-    <div className="mobile-nav">
+    {/* <div className="mobile-nav">
         <MobExport/>
-      </div>
+      </div> */}
       <About/>
       <CatlogSection/>
       <ProcessSection/>
