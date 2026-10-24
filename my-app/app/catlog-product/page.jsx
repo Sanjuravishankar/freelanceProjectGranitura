@@ -12,488 +12,228 @@ import SpecialistScheduler from "../component/SpecialistScheduler";
 
 // ─────────────────────────────────────────────
 
+
 const PRODUCTS = [
-
   {
-
     id: 1,
-
     name: "Italian White Marble",
-
     category: "Marble",
-
     origin: "Rajasthan, India",
-
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
-
+    image: "assets/granite/granite1.jpeg",
     tag: "Best Seller",
-
     tagColor: "#d4bc8a",
-
-    description: "Timeless white marble with graceful natural veining, sourced from premier Indian quarries. Ideal for flooring, wall cladding, and luxury interior applications.",
-
-    longDesc: "Italian-grade white marble quarried from the finest deposits in Rajasthan. Each slab presents a unique pattern of natural veining ranging from subtle grey to warm gold undertones. Suitable for flooring, feature walls, countertops, bathrooms and high-end hospitality projects. Supplied in both slab and tile formats with customised cutting available.",
-
-    specs: {
-
-      "Water Absorption": "< 0.4%",
-
-      "Compressive Strength": "131 MPa",
-
-      "Flexural Strength": "14 MPa",
-
-      "Finish Available": "Polished, Honed, Brushed",
-
-      "Slab Size": "Up to 2800 × 1600 mm",
-
-      "Thickness": "16mm, 18mm, 20mm, 30mm",
-
-    },
-
-    applications: ["Flooring", "Wall Cladding", "Countertops", "Staircases", "Feature Walls"],
-
+    description: "Timeless white marble with graceful natural veining.",
     pricing: {
-
       "Export Quality": 320,
-
       "Premium Grade": 260,
-
       "Commercial Grade": 200,
-
       "Economy Grade": 150,
-
     },
-
     unit: "sq.ft",
-
     moq: "200 sq.ft",
-
     leadTime: "10–14 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 2,
-
     name: "Black Galaxy Granite",
-
     category: "Granite",
-
     origin: "Andhra Pradesh, India",
-
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200",
-
+    image: "assets/granite/granite2.jpeg",
     tag: "Export Grade",
-
     tagColor: "#4a8a5e",
-
-    description: "Deep black granite with shimmering golden flecks, forming a dramatic night-sky texture. The premium choice for countertops, flooring and statement facades.",
-
-    longDesc: "Black Galaxy is among the world's most recognised granites, quarried exclusively in Nellore district of Andhra Pradesh. The hypnotic golden bronze specks embedded in a near-black base make it a perennial favourite for luxury exports. Dimensionally stable, low porosity and exceptionally durable — suited for both indoor and outdoor applications including heavy-traffic commercial floors.",
-
-    specs: {
-
-      "Water Absorption": "< 0.1%",
-
-      "Compressive Strength": "228 MPa",
-
-      "Flexural Strength": "18 MPa",
-
-      "Finish Available": "Polished, Flamed, Leather",
-
-      "Slab Size": "Up to 3000 × 1800 mm",
-
-      "Thickness": "18mm, 20mm, 30mm, 40mm",
-
-    },
-
-    applications: ["Countertops", "Flooring", "Exterior Cladding", "Monuments", "Kitchen Tops"],
-
+    description: "Deep black granite with shimmering golden flecks.",
     pricing: {
-
       "Export Quality": 240,
-
       "Premium Grade": 190,
-
       "Commercial Grade": 150,
-
       "Economy Grade": 110,
-
     },
-
     unit: "sq.ft",
-
     moq: "300 sq.ft",
-
     leadTime: "7–10 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 3,
-
     name: "Forest Green Marble",
-
     category: "Marble",
-
     origin: "Udaipur, Rajasthan",
-
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200",
-
+    image: "assets/granite/granite3.jpeg",
     tag: "Luxury",
-
     tagColor: "#b8a070",
-
-    description: "Rich deep-green marble with natural movement and character. A bold material choice for feature walls, luxury hospitality and architectural statements.",
-
-    longDesc: "Forest Green marble from the Udaipur belt is prized for its deep emerald base with contrasting white calcite veining. Each slab is virtually unique. Widely specified by leading architects and interior designers for hotel lobbies, spa interiors, reception counters and exterior feature installations. Available in bookmatched pairs for maximum visual impact.",
-
-    specs: {
-
-      "Water Absorption": "< 0.3%",
-
-      "Compressive Strength": "118 MPa",
-
-      "Flexural Strength": "12 MPa",
-
-      "Finish Available": "Polished, Honed, Sandblasted",
-
-      "Slab Size": "Up to 2600 × 1500 mm",
-
-      "Thickness": "18mm, 20mm, 30mm",
-
-    },
-
-    applications: ["Feature Walls", "Hotel Lobbies", "Bathroom Vanities", "Reception Desks", "Pool Surrounds"],
-
+    description: "Rich deep-green marble with natural movement.",
     pricing: {
-
       "Export Quality": 390,
-
       "Premium Grade": 320,
-
       "Commercial Grade": 250,
-
       "Economy Grade": 180,
-
     },
-
     unit: "sq.ft",
-
     moq: "150 sq.ft",
-
     leadTime: "12–18 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 4,
-
     name: "Absolute Black Granite",
-
     category: "Granite",
-
     origin: "Tamil Nadu, India",
-
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200",
-
+    image: "assets/granite/granite4.jpeg",
     tag: "High Demand",
-
     tagColor: "#4a8a5e",
-
-    description: "Pure jet-black granite with a mirror-like polished surface. Delivers a sophisticated, timeless aesthetic for high-end countertops and architectural cladding.",
-
-    longDesc: "Absolute Black granite from Tamil Nadu is one of the hardest and most uniform granites available globally. Zero visible grain variation makes it the preferred choice for minimalist architecture, contemporary kitchens and luxury bathrooms. Exceptional scratch and heat resistance. Widely exported to USA, UAE, UK and European markets for both residential and commercial projects.",
-
-    specs: {
-
-      "Water Absorption": "< 0.05%",
-
-      "Compressive Strength": "248 MPa",
-
-      "Flexural Strength": "21 MPa",
-
-      "Finish Available": "Polished, Leathered, Flamed",
-
-      "Slab Size": "Up to 3200 × 2000 mm",
-
-      "Thickness": "18mm, 20mm, 30mm, 40mm",
-
-    },
-
-    applications: ["Kitchen Countertops", "Bathroom Floors", "Exterior Facades", "Stairs", "Monuments"],
-
+    description: "Pure jet-black granite with a mirror-like finish.",
     pricing: {
-
       "Export Quality": 280,
-
       "Premium Grade": 220,
-
       "Commercial Grade": 175,
-
       "Economy Grade": 130,
-
     },
-
     unit: "sq.ft",
-
     moq: "400 sq.ft",
-
     leadTime: "7–12 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 5,
-
     name: "Kota Blue Stone",
-
     category: "Natural Stone",
-
     origin: "Kota, Rajasthan",
-
-    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200",
-
+    image: "assets/granite/granite5.jpeg",
     tag: "Heritage Stone",
-
     tagColor: "#7a9080",
-
-    description: "Classic Indian natural limestone with a distinctive blue-grey hue. Renowned for exceptional durability, slip resistance and timeless character for outdoor use.",
-
-    longDesc: "Kota stone is India's most iconic natural flooring material — quarried in Kota district of Rajasthan for centuries. Its fine-grained limestone composition delivers superior anti-skid properties making it ideal for courtyards, pathways, terraces and commercial areas. It improves in appearance over time with natural use. Cost-effective, sustainable and widely specified for both heritage restoration and modern architecture.",
-
-    specs: {
-
-      "Water Absorption": "< 1.5%",
-
-      "Compressive Strength": "95 MPa",
-
-      "Flexural Strength": "8 MPa",
-
-      "Finish Available": "Natural, Machine-cut, Polished",
-
-      "Slab Size": "Custom cut to order",
-
-      "Thickness": "20mm, 25mm, 30mm",
-
-    },
-
-    applications: ["Outdoor Flooring", "Courtyards", "Staircases", "Garden Paths", "Commercial Areas"],
-
+    description: "Durable blue-grey natural stone for outdoor flooring.",
     pricing: {
-
       "Export Quality": 120,
-
       "Premium Grade": 95,
-
       "Commercial Grade": 75,
-
       "Economy Grade": 55,
-
     },
-
     unit: "sq.ft",
-
     moq: "500 sq.ft",
-
     leadTime: "5–8 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 6,
-
     name: "Kashmir White Granite",
-
     category: "Granite",
-
-    origin: "Tamil Nadu, India",
-
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
-
+    origin: "India",
+    image: "assets/granite/granite6.jpeg",
     tag: "Premium",
-
     tagColor: "#d4bc8a",
-
-    description: "White granite with intricate burgundy and grey mineral veining. A warm, sophisticated stone with the durability of granite and the elegance of marble.",
-
-    longDesc: "Kashmir White is one of India's most celebrated export granites — combining a creamy white base with an intricate pattern of burgundy garnets and dark grey amphibole minerals. Uniquely, it offers the visual richness of marble with granite's dimensional stability and stain resistance. A top specification for kitchen countertops and bathroom applications across North American and European markets.",
-
-    specs: {
-
-      "Water Absorption": "< 0.2%",
-
-      "Compressive Strength": "195 MPa",
-
-      "Flexural Strength": "16 MPa",
-
-      "Finish Available": "Polished, Honed, Brushed",
-
-      "Slab Size": "Up to 2800 × 1800 mm",
-
-      "Thickness": "16mm, 18mm, 20mm, 30mm",
-
-    },
-
-    applications: ["Kitchen Countertops", "Bathroom Vanities", "Flooring", "Wall Cladding", "Island Tops"],
-
+    description: "Elegant white granite with grey and burgundy mineral patterns.",
     pricing: {
-
       "Export Quality": 310,
-
       "Premium Grade": 250,
-
       "Commercial Grade": 195,
-
       "Economy Grade": 145,
-
     },
-
     unit: "sq.ft",
-
     moq: "250 sq.ft",
-
     leadTime: "8–14 days",
-
     inStock: true,
-
   },
-
   {
-
     id: 7,
-
     name: "Indian Aurora Marble",
-
     category: "Marble",
-
     origin: "Madhya Pradesh, India",
-
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1200",
-
+    image: "assets/granite/granite7.jpeg",
     tag: "New Arrival",
-
     tagColor: "#b8a070",
-
-    description: "A warm beige-gold marble with flowing veins of amber and ivory. Evokes the soft tones of Italian Onyx with the structural strength of Indian quarries.",
-
-    longDesc: "Indian Aurora is a premium warm-toned marble from Madhya Pradesh featuring a rich beige base overlaid with flowing veins of amber, gold and ivory. Its visual warmth makes it particularly desirable for master bedrooms, spa bathrooms, and luxury hospitality projects. Bookmatched pairs create dramatic wall installations. Supplied in calibrated tiles or rough-cut slabs for architectural projects.",
-
-    specs: {
-
-      "Water Absorption": "< 0.5%",
-
-      "Compressive Strength": "108 MPa",
-
-      "Flexural Strength": "11 MPa",
-
-      "Finish Available": "Polished, Brushed, Leather",
-
-      "Slab Size": "Up to 2400 × 1400 mm",
-
-      "Thickness": "18mm, 20mm, 30mm",
-
-    },
-
-    applications: ["Master Bedrooms", "Spa Interiors", "Bathroom Walls", "Feature Panels", "Luxury Hotels"],
-
+    description: "Warm beige-gold marble with flowing natural veins.",
     pricing: {
-
       "Export Quality": 360,
-
       "Premium Grade": 290,
-
       "Commercial Grade": 225,
-
       "Economy Grade": 165,
-
     },
-
     unit: "sq.ft",
-
     moq: "150 sq.ft",
-
     leadTime: "14–20 days",
-
     inStock: false,
-
   },
-
   {
-
     id: 8,
-
     name: "Steel Grey Granite",
-
     category: "Granite",
-
     origin: "Andhra Pradesh, India",
-
-    image: "https://images.unsplash.com/photo-1495808898061-ad83e3f22f1c?q=80&w=1200",
-
+    image: "assets/granite/granite8.jpeg",
     tag: "Industrial",
-
     tagColor: "#7a9080",
-
-    description: "Cool-toned dark grey granite with a uniform fine grain. Versatile and architectural — equally at home in contemporary residential and large-scale commercial projects.",
-
-    longDesc: "Steel Grey granite from Andhra Pradesh is defined by its consistent dark charcoal-grey tone with minimal pattern variation. Its uniformity makes it a favourite for large installations where consistency across slabs is essential — shopping malls, office lobbies, airport concourses and modern residential developments. Highly frost-resistant and suitable for exterior applications. Available in jumbo slab format.",
-
-    specs: {
-
-      "Water Absorption": "< 0.08%",
-
-      "Compressive Strength": "215 MPa",
-
-      "Flexural Strength": "19 MPa",
-
-      "Finish Available": "Polished, Flamed, Bushhammered",
-
-      "Slab Size": "Up to 3200 × 1800 mm",
-
-      "Thickness": "20mm, 30mm, 40mm",
-
-    },
-
-    applications: ["Commercial Flooring", "Exterior Facades", "Paving", "Office Lobbies", "Landscaping"],
-
+    description: "Dark charcoal-grey granite for modern architectural projects.",
     pricing: {
-
       "Export Quality": 195,
-
       "Premium Grade": 155,
-
       "Commercial Grade": 120,
-
       "Economy Grade": 90,
-
     },
-
     unit: "sq.ft",
-
     moq: "500 sq.ft",
-
     leadTime: "7–10 days",
-
     inStock: true,
-
   },
-
+  {
+    id: 9,
+    name: "Premium Brown Granite",
+    category: "Granite",
+    origin: "India",
+    image: "assets/granite/granite9.jpeg",
+    tag: "Popular Choice",
+    tagColor: "#b8a070",
+    description: "Warm brown granite suited to countertops, flooring and wall cladding.",
+    pricing: {
+      "Export Quality": 230,
+      "Premium Grade": 185,
+      "Commercial Grade": 145,
+      "Economy Grade": 105,
+    },
+    unit: "sq.ft",
+    moq: "200 sq.ft",
+    leadTime: "7–12 days",
+    inStock: true,
+  },
+  {
+    id: 10,
+    name: "River White Granite",
+    category: "Granite",
+    origin: "India",
+    image: "assets/granite/granite10.jpeg",
+    tag: "Modern Classic",
+    tagColor: "#d4bc8a",
+    description: "Light granite with flowing grey patterns for elegant interiors.",
+    pricing: {
+      "Export Quality": 270,
+      "Premium Grade": 220,
+      "Commercial Grade": 170,
+      "Economy Grade": 125,
+    },
+    unit: "sq.ft",
+    moq: "250 sq.ft",
+    leadTime: "8–14 days",
+    inStock: true,
+  },
+  {
+    id: 11,
+    name: "Premium Red Granite",
+    category: "Granite",
+    origin: "India",
+    image: "assets/granite/granite11.jpeg",
+    tag: "Signature",
+    tagColor: "#a65b52",
+    description: "Distinctive red granite for statement floors, stairs and exterior applications.",
+    pricing: {
+      "Export Quality": 250,
+      "Premium Grade": 200,
+      "Commercial Grade": 155,
+      "Economy Grade": 115,
+    },
+    unit: "sq.ft",
+    moq: "300 sq.ft",
+    leadTime: "7–14 days",
+    inStock: true,
+  },
 ];
 
 
