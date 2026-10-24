@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import SpecialistScheduler from "../component/SpecialistScheduler";
@@ -775,7 +775,7 @@ export default function StoneCatalog() {
 
           <div style={p.heroStats}>
 
-            {[["500+", "Stone Varieties"], ["20+", "Years Expertise"], ["4", "Export Markets"], ["ISO 9001", "Certified"]].map(([num, label]) => (
+            {[[String(PRODUCTS.length), "Catalog Items"], ["20+", "Years Expertise"], ["4", "Export Markets"], ["ISO 9001", "Certified"]].map(([num, label]) => (
 
               <div key={label} style={p.heroStat}>
 
