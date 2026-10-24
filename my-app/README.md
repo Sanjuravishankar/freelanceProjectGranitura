@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Granitura — Natural Stone & Export
+
+A professional website concept for Granitura, focused on natural stone sourcing, granite, marble, paving stones, export enquiries, and B2B lead management.
+
+## Features
+
+- Professional, responsive company website
+- Granite, marble, and paving stone product sections
+- Export and bulk-order enquiry process
+- Customer enquiry form
+- Interactive CRM demonstration
+- Lead pipeline: New Enquiry, Qualified, Quotation Sent, Won
+- Sales pipeline metrics and lead tracking
+
+## Tech Stack
+
+- **Frontend:** Next.js and TypeScript
+- **Hosting:** Vercel
+- **Database:** MongoDB Atlas
+- **Email notifications:** Nodemailer or an email service
+- **CRM:** Custom lead management system
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit `app/page.tsx` to update the main page in your Next.js App Router project.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Planned CRM Integration
 
-## Learn More
+The production CRM should support:
 
-To learn more about Next.js, take a look at the following resources:
+- Customer and company records
+- Export enquiries and destination markets
+- Material specifications and quantities
+- Follow-up dates and sales activities
+- Quotations and opportunity values
+- Lead status updates
+- Email notifications
+- Secure administrator login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Store private configuration in `.env.local`:
 
-## Deploy on Vercel
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Never expose database credentials or email API keys in frontend code or commit them to Git.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+1. Push the Next.js project to GitHub.
+2. Import the repository into Vercel.
+3. Configure the required environment variables.
+4. Deploy the application.
+5. Test enquiry submission, database storage, and email delivery.
+
+## Important
+
+The current website concept includes demo CRM data and a demonstration enquiry form. Real database storage, email delivery, authentication, and CRM integration must be implemented before production use.
