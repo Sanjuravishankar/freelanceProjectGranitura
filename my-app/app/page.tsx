@@ -30,6 +30,8 @@ export default function Home() {
         <GranituraMobileNav />
       </div>
      <Hero/>
+      <CatlogSection/>
+      
      <div className="desktop-nav">
  <Export />
      </div>
@@ -37,7 +39,7 @@ export default function Home() {
         <MobExport/>
       </div>
       <About/>
-      <CatlogSection/>
+     
       <ProcessSection/>
       <WhyUs />
       <Testimonial />
